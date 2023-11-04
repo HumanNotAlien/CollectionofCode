@@ -1,4 +1,4 @@
-# CollectionofCodePt1
+# CollectionofCode
 Just a bunch of C# code for unity
 
 This code was used for 2D projects
