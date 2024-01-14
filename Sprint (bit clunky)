@@ -1,0 +1,48 @@
+public float speed;
+public float sprint;
+public float sprintcooldown;
+
+  private void Update()
+ {
+   
+     if (sprint == 5)
+     {
+         if (Input.GetKeyDown("e"))
+         {
+             speed = speed * 2;
+             
+          
+             sprint = 2;
+
+         }
+ 
+     }
+
+     if (sprint <= 2)
+     {
+         sprint = sprint - Time.deltaTime;
+     }
+     if (sprint <= 0)
+     {
+         speed = speed / 2;
+         sprintcooldown = 1;
+         sprint = 3;
+     }
+     
+     if ((sprintcooldown >= 1))
+     {
+         sprintcooldown = sprintcooldown + Time.deltaTime;
+
+     }
+        if (sprintcooldown >= 4)
+        {
+         sprintcooldown = 0;
+         sprint = 5;
+        }
+     
+
+     
+     
+
+ 
+ }
